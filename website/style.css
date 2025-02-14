@@ -1,0 +1,97 @@
+/* General Reset */
+body, h1, h2, h3, p, form, input, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Header Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.header {
+    width: 100%;
+    height: 25vh;
+    background: linear-gradient(to right, pink, black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.header h1 {
+    font-size: 3rem;
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+}
+
+.intro-img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.intro-content h2 {
+    font-size: 2rem;
+    color: #ff69b4;
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+}
+
+/* Form Section */
+.form-section {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+
+.form-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #e75480;
+}
+
+.result {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #333;
+}

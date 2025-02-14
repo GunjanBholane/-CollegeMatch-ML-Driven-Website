@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollegeMatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>📚🎓Dream College🏢🏫</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <img src="Designer.jpeg" alt="Engineering Career" class="intro-img">
+            <div class="intro-content">
+                <h2>Want Career in Engineering?</h2>
+                <p>Check whether you are eligible for Top Colleges</p>
+            </div>
+        </section>
+        <section class="form-section">
+            <h3>Find Your College</h3>
+            <form id="college-form">
+                <label for="marks">Enter your MHT-CET Percentile:</label>
+                <input type="number" id="marks" name="marks" placeholder="e.g., 95" required>
+                
+                <label for="caste">Select your Caste:</label>
+                <select id="caste" name="caste" required>
+                    <option value="" disabled selected>Choose an option</option>
+                    <option value="OBC">OBC</option>
+                    <option value="Open">Open</option>
+                </select>
+                
+                <label for="branch">Select your Branch:</label>
+                <select id="branch" name="branch" required>
+                    <option value="" disabled selected>Choose an option</option>
+                    <option value="Computer">Computer</option>
+                    <option value="Mechanical">Mechanical</option>
+                </select>
+                
+                <button type="button" id="check-eligibility">Check Eligibility</button>
+            </form>
+            <div id="result" class="result"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

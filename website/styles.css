@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: rgba(255, 192, 203, 0.897);
+    color: rgb(14, 0, 0);
+
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(242, 166, 179, 0.99), rgba(0, 0, 0, 0.095));
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.nav-buttons button {
+    background:   rgba(228, 56, 85, 0.918);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background 0.3s;
+}
+
+.nav-buttons button:hover {
+    background: #ff69b4;
+    transform: scale(1.05);
+}
+
+.nav-buttons button:active {
+    transform: scale(0.95);
+}
+
+/* Zigzag Section */
+.zigzag-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Each Section Box */
+.section-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Left-Aligned Sections */
+.section-box.left {
+    flex-direction: row-reverse;
+}
+
+/* Right-Aligned Sections */
+.section-box.right {
+    flex-direction: row;
+}
+
+/* Photo Styling */
+.section-photo {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Content Box */
+.section-content {
+    width: 55%;
+    padding: 20px;
+    text-align: left;
+}
+
+.section-content p {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.section-content button {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.section-content button:hover {
+    background: #ff69b4;
+    transform: scale(1.05);
+}
+
+.section-content button:active {
+    transform: scale(0.95);
+}

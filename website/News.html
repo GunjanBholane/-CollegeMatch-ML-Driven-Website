@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Section</title>
+    <link rel="stylesheet" href="news.css">
+</head>
+<body>
+    <div class="news-section">
+        <h1>Latest News</h1>
+        <div class="news-grid">
+            <!-- News Item 1 -->
+            <div class="news-item">
+                <img src="news-1.jpg" alt="News 1" onclick="showModal(this.src)">
+                <div class="news-caption">Exciting Updates on Engineering Admissions!</div>
+            </div>
+            <!-- News Item 2 -->
+            <div class="news-item">
+                <img src="news-2.jpg" alt="News 2" onclick="showModal(this.src)">
+                <div class="news-caption">Latest Entrance Exam Rules Announced</div>
+            </div>
+            <!-- News Item 3 -->
+            <div class="news-item">
+                <img src="news-3.jpg" alt="News 3" onclick="showModal(this.src)">
+                <div class="news-caption">Scholarship Opportunities You Shouldn't Miss</div>
+            </div>
+            <!-- News Item 4 -->
+            <div class="news-item">
+                <img src="news-2.jpg" alt="News 4" onclick="showModal(this.src)">
+                <div class="news-caption">Find Out How to Secure Your Dream College</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script src="news.js"></script>
+</body>
+
+</html>

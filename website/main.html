@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Match</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>👨🏻‍🎓College Match👩🏻‍🎓</h1>
+        <div class="nav-buttons">
+            <button onclick="navigate('file:///D:/F%20.%20P/Clg/html2/About.html')">About Us</button>
+            <button onclick="navigate('http://127.0.0.1:5000/')">Dream College</button>
+            <button onclick="navigate('file:///D:/F%20.%20P/Clg/html2/News.html')">News</button>
+            <button onclick="navigate('file:///D:/F%20.%20P/Clg/html2/colleges.html')">Colleges</button>
+            <button onclick="navigate('file:///D:/F%20.%20P/Clg/html2/sch.html')">Scholarships</button>
+        </div>
+    </div>
+
+    <div class="zigzag-section">
+        <!-- Section 1 -->
+        <div class="section-box left">
+            <img src="about-photo-1.jpg" alt="About Us Photo" class="section-photo">
+            <div class="section-content">
+                <p>We are a group of students currently enrolled in college, helping other students find suitable engineering colleges based on their needs.</p>
+                <button onclick="navigate('file:///D:/F%20.%20P/Clg/html2/About.html')">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section-box right">
+            <img src="about-photo-2.jpg" alt="Dream College Photo" class="section-photo">
+            <div class="section-content">
+                <p>Find out which top engineering colleges match your profile and eligibility based on marks and entrance exams.</p>
+                <button onclick="navigate('file:///D:/F%20.%20P/Clg/html2/index.html')">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section-box left">
+            <img src="about-photo-3.jpg" alt="News Photo" class="section-photo">
+            <div class="section-content">
+                <p>Stay updated with the latest news about entrance exams, rules, and regulations for college admissions.</p>
+                <button onclick="navigate('file:///D:/F%20.%20P/Clg/html2/News.html')">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section-box right">
+            <img src="about-photo-5.jpg" alt="Colleges Photo" class="section-photo">
+            <div class="section-content">
+                <p>Explore the top engineering colleges in Maharashtra and check out their details and eligibility criteria.</p>
+                <button onclick="navigate('file:///D:/F%20.%20P/Clg/html2/colleges.html')">Learn More</button>
+            </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section-box left">
+            <img src="about-photo-4.jpg" alt="Scholarships Photo" class="section-photo">
+            <div class="section-content">
+                <p>Find scholarships available for students in Maharashtra based on their caste and family income.</p>
+                <button onclick="navigate('file:///D:/F%20.%20P/Clg/html2/sch.html')">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to handle navigation
+        function navigate(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: #ff69b4;
+}
+
+h1 {
+    height: 25vh; /* 25% of the viewport height */
+    text-align: center;
+    margin: 0; /* Remove margin for accurate height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff69b4;
+    background: linear-gradient(to right, rgba(255, 192, 203, 0.99), rgba(0, 0, 0, 0.183));
+    font-size: 2.5rem; /* Adjust as per requirement */
+}
+
+
+/* College Section */
+.colleges-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.college {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+/* Image Box */
+.image-box {
+    flex: 1;
+    padding: 10px;
+}
+
+.image-box img {
+    width: 450px; /* Set the desired width */
+    height: 350px; /* Set the desired height */
+    border-radius: 10px; /* Keeps the rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    object-fit: cover; /* Ensures images fill the box without distortion */
+}
+
+
+/* Details Box */
+.details-box {
+    flex: 1;
+    padding: 20px;
+    background: #fff;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.details-box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.details-box table th, .details-box table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.details-box table th {
+    color: #ff69b4;
+    font-size: 18px;
+}
+
+.details-box table td {
+    font-size: 16px;
+}
+
+.details-box a {
+    color: #ff69b4;
+    text-decoration: none;
+}
+
+.details-box a:hover {
+    text-decoration: underline;
+}
