@@ -8,20 +8,20 @@ CollegeMatch is a web-based application designed to help students find suitable 
 
 - 📊 **College Predictor**: Suggests colleges based on marks, category, and branch preferences.
 - 📍 **Google Maps Integration**: Helps students locate colleges easily.
-- 🎓 **Career Guidance**: Provides insights into different engineering disciplines and job opportunities.
+- 🎓 **Career Guidance**: Provides insights into different engineering disciplines.
 - 💰 **Scholarship Information**: Displays available scholarships for different categories.
 - 🔍 **User-Friendly Interface**: Built with an interactive and responsive UI.
 
 🛠️ **Tech Stack**
 
 **Frontend**:
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript (React)
 
 **Backend**:
 - Python (Flask)
-- Machine Learning Model for Prediction
+- Machine Learning Model for Prediction Random Forest
 
 **APIs & Tools**:
 - Google Maps API (for location-based services)
