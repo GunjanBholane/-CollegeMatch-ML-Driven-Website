@@ -6,7 +6,7 @@ CollegeMatch is a web-based application designed to help students find suitable 
 ## Screenshots
 
 ### Main Home Page
-![Main Home Page](images/main%20home%20page.jpg)
+![Picture1](output/Picture1.png)
 
 ### College Prediction
 ![College Prediction](images/College%20prediction.jpg)
