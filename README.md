@@ -28,10 +28,9 @@ CollegeMatch is a web-based application designed to help students find suitable 
 - JavaScript (React)
 
 **Backend**:
-- Python (Flask)
+- Python (Django)
 - Machine Learning Model for Prediction Random Forest
 
 **APIs & Tools**:
-- Google Maps API (for location-based services)
 - Pandas, NumPy, Scikit-learn (for ML model)
 
