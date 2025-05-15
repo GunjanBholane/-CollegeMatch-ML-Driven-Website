@@ -15,7 +15,6 @@ CollegeMatch is a web-based application designed to help students find suitable 
 🎯 **Features**
 
 - 📊 **College Predictor**: Suggests colleges based on marks, category, and branch preferences.
-- 📍 **Google Maps Integration**: Helps students locate colleges easily.
 - 🎓 **Career Guidance**: Provides insights into different engineering disciplines.
 - 💰 **Scholarship Information**: Displays available scholarships for different categories.
 - 🔍 **User-Friendly Interface**: Built with an interactive and responsive UI.
