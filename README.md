@@ -9,9 +9,9 @@ CollegeMatch is a web-based application designed to help students find suitable 
 ![Picture1](output/Picture1.png)
 
 ### College Prediction
-![Picture2](output/Picture1.png)
+![Picture2](output/Picture2.png)
 ### Colleges You Can Apply
-![Picture3](output/Picture1.png)
+![Picture3](output/Picture3.png)
 🎯 **Features**
 
 - 📊 **College Predictor**: Suggests colleges based on marks, category, and branch preferences.
