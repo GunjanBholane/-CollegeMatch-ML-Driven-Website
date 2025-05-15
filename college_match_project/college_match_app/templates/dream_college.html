@@ -1,0 +1,371 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %} 
+<style>
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background: white;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.header-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.career-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+/* Main Container */
+.main-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Image Section */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+}
+
+/* Form Section */
+.form-section {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px solid #ff69b4;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    min-width: 320px;
+    max-width: 500px;
+}
+
+.form-section h2 {
+    color: #ff69b4;
+    margin-bottom: 15px;
+}
+
+/* Form Fields */
+label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 6px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #ff69b4;
+    outline: none;
+    box-shadow: 0 0 6px rgba(255, 105, 180, 0.5);
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    background: #ff69b4;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #e75480;
+    transform: scale(1.05);
+}
+
+/* Results Section */
+.results-section {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #ff69b4;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;  
+    text-align: center
+    
+
+}
+
+.results-section h3 {
+    color: #ff69b4;
+    margin-bottom: 12px;
+    text-align: center;  /* Center the text */
+    font-size: 1.5rem;  /* Adjust size if needed */
+    font-weight: bold;
+}
+
+
+/* Results List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.no-result {
+    color: red;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-section img {
+        max-width: 300px;
+    }
+
+    .form-section {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .results-section {
+        width: 95%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .career-heading {
+        font-size: 1.5rem;
+    }
+
+    .image-section img {
+        max-width: 250px;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+    .glow {
+    color: black; /* Base text color */
+    text-shadow:
+        0 0 5px pink,
+        0 0 10px pink,
+        0 0 15px pink; /* Creates the red glow effect */
+}
+
+
+#branch {
+    width: 100%;
+    max-width: 500px;
+    padding: 14px;
+    font-size: 1rem;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(255, 105, 180, 0.2);
+    transition: border-color 0.3s ease-in-out;
+}
+#branch:focus {
+    border-color: #ff69b4;
+    outline: none;
+    box-shadow: 0 0 6px rgba(255, 105, 180, 0.5);
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+    background-color: white;
+}
+
+select:focus {
+    border-color: #ff69b4;
+    outline: none;
+    box-shadow: 0 0 6px rgba(255, 105, 180, 0.5);
+}
+
+</style>
+
+  
+
+
+
+
+
+
+
+<div class="header-container">
+<h1 class="career-heading">Want a Career in Engineering? <span class="highlight">Get Consultancy <a href="{% url 'get_consultancy' %}">Here</a></span></h1>
+</div>
+
+<main class="main-container1">
+    <div class="image-section">
+        <img src="{% static 'Designer.jpeg' %}" alt="Student Image">
+    </div>
+
+    <section class="form-section">
+        <h2>Enter Your Details</h2>
+        <form method="POST" action="{% url 'dream_college' %}" >
+            {% csrf_token %}
+            <label for="branch">Branch:</label>
+<select id="branch" name="branch" required>
+  <option value="">-- Select Branch --</option>
+  <option>Computer Engineering</option>
+  <option>Mechanical Engineering</option>
+  <option>Civil Engineering</option>
+  <option>Artificial Intelligence and Data Science</option>
+  <option>Computer Science and Engineering</option>
+  <option>Artificial Intelligence & Data Science</option>
+  <option>Computer Science Engineering</option>
+  <option>Electrical Engineering</option>
+  <option>Aeronautical Engineering</option>
+  <option>Food Technology</option>
+  <option>Information Technology</option>
+  <option>Automation & Robotics</option>
+  <option>Chemical Engineering</option>
+  <option>Data Science</option>
+  <option>Robotics and Automation</option>
+  <option>Instrumentation & Control Engineering</option>
+  <option>VLSI Design and Technology</option>
+</select>
+
+
+<label for="category">Category:</label>
+<select id="category" name="category" required>
+  <option value="">-- Select Category --</option>
+  <option value="SC">SC</option>
+  <option value="ST">ST</option>
+  <option value="EWS">EWS</option>
+  <option value="EWS (Female)">EWS (Female)</option>
+  <option value="EWS (Male)">EWS (Male)</option>
+  <option value="General">General</option>
+  <option value="OBC">OBC</option>
+  <option value="VJ/DT">VJ/DT</option>
+      <option value="NT">NT</option>
+
+  <option value="NT(A)">NT(A)</option>
+  <option value="NT(B)">NT(B)</option>
+  <option value="NT(C)">NT(C)</option>
+  <option value="NT(D)">NT(D)</option>
+  <option value="NT1O">NT1O</option>
+  <option value="NT2O">NT2O</option>
+  <option value="NT3O">NT3O</option>
+  <option value="TFWS">TFWS</option>
+  <option value="TFWS (Female)">TFWS (Female)</option>
+  <option value="TFWS (Male)">TFWS (Male)</option>
+  <option value="SBC">SBC</option>
+  <option value="EBC">EBC</option>
+  <option value="All India SBC EBC">All India SBC EBC</option>
+  <option value="PWD">PWD</option>
+  <option value="PWDOPENH">PWDOPENH</option>
+  <option value="ORPHAN TFWS (Female)">ORPHAN TFWS (Female)</option>
+</select>
+
+            <label for="marks">Marks:</label>
+            <input type="number" step="0.01" id="marks" name="marks" required>
+
+            <button type="submit">Get Colleges</button>
+        </form>
+    </section>
+</main>
+
+{% if colleges %}
+<section class="results-section">
+    {% if colleges|length > 0 %}
+        <h3>Colleges You Can Apply To:</h3>
+        <ul>
+            {% for college in colleges %}
+                <li>{{ college }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="no-result">No matching colleges found. Please check your input.</p>
+    {% endif %}
+</section>
+{% endif %}
+<footer>
+<h2 class="glow">Did not found your Dream College Get Consultancy <a href="{% url 'get_consultancy' %}">Here</a></h2>
+</footer>
+{% endblock content %}
+
+   

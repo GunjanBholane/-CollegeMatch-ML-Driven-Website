@@ -1,0 +1,111 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Match</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <style>
+        /* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white  ;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, rgba(244, 106, 143, 0.69), rgba(0, 0, 0, 0.297));
+    color: white;  /* White */
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Navigation Bar */
+nav {
+    background: linear-gradient(to right, rgba(244, 106, 143, 0.69), rgba(0, 0, 0, 0.297));
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;  /* Light Gray */
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    background-color: #374151;  /* Dark Gray */
+    color: white;
+}
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(128, 128, 128, 0.611); /* Keep the same color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+    background-color: #e63973; /* Slightly darker shade on hover */
+}
+
+    </style>
+    
+    <header>
+        <h1>College Match</h1>
+    </header>
+    <div class="sections">
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}" class="nav-button">Home</a></li>
+
+                <li><a href="{% url 'about_us' %}" class="nav-button">About Us</a></li>
+                <li><a href="{% url 'news' %}" class="nav-button">News</a></li>
+                <li><a href="{% url 'top_colleges' %}" class="nav-button">Top Colleges</a></li>
+                <li><a href="{% url 'get_consultancy' %}" class="nav-button">Consultancy</a></li>
+                <li><a href="{% url 'dream_college' %}" class="nav-button">College Predictor</a></li>
+                <li><a href="{% url 'scholarships' %}" class="nav-button">Scholarships</a></li>
+                <li><a href="{% url 'faq' %}" class="nav-button">faqs</a></li>
+                <li><a href="{% url 'profile' %}" class="nav-button">Profile</a></li>
+
+            </ul>
+        </nav>
+        
+    </div>   
+    
+    
+
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

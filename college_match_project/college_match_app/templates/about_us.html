@@ -1,0 +1,296 @@
+{% extends "index.html" %}
+{% load static %} 
+
+{% block content %}
+<style>
+/* General Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column; /* Stack text-image pairs vertically */
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Text-Image Row */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Left Side (Text) */
+.text-box {
+    flex: 1.5;
+    background: #fff;
+    padding: 15px;
+    border-left: 5px solid #ff4d94;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-right: 20px; /* Space between text and image */
+}
+
+.text-box h2 {
+    color: #ff4d94;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.text-box p,
+.text-box ul {
+    text-align: left;
+}
+
+/* Right Side (Images) */
+.image-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box img {
+    width: 100%;
+    max-width: 250px; /* Ensure images don't get too large */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.footer-content h3 {
+        margin-bottom: 10px;
+    }
+
+/* Scholarships Button Styling */
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(128, 128, 128, 0.611); /* Keep the same color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+    background-color: #e63973; /* Slightly darker shade on hover */
+}
+.nav-button1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4d94; /* Keep the same color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.nav-button1:hover {
+    background-color: #e63973; /* Slightly darker shade on hover */
+}
+
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-box {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .image-box img {
+        width: 60%;
+    }
+}
+/* Moving logos at the bottom */
+.logo-marquee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.logo-marquee-container {
+    display: flex;
+    animation: marquee 15s linear infinite;
+}
+
+.logo-marquee-container {
+    display: flex;
+    animation: marquee 15s linear infinite;
+    animation-play-state: running; /* Default */
+}
+
+/* Pause animation on hover */
+.logo-marquee-container:hover {
+    animation-play-state: paused;
+}
+
+/* Animation for moving logos */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.logo-marquee-container img {
+    margin: 0 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 95px; /* Adjust the size as needed */
+}
+/* Footer Styling */
+footer {
+    background-color: white; /* Dark gray background */
+    padding: 30px 0;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+/* Footer Legal Links Styling */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.footer-links a {
+    color: #b3b3b3; /* Light gray text */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #ff4d94; /* Pink on hover */
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
+  
+  
+<div class="container">
+    <div class="content-box">
+        {% csrf_token %}
+        <!-- Row 1 -->
+        <div class="row">
+            <div class="text-box">
+                <h2>How to Use the Website</h2>
+                <p>Use our website to:</p>
+                <ul>
+                    <li>Check your eligibility for top colleges based on your marks and caste.</li>
+                    <li>Stay updated with the latest news about entrance exams, rules, and regulations.</li>
+                    <li>Explore scholarships in the "Scholarships" section.</li>
+                    <li>Find out if you are directly eligible for top colleges in the "Dream College" section.</li>
+                </ul>
+            </div>
+            <div class="image-box">
+                <img src="{% static 'about-photo-2.jpg' %}" alt="About Us">
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row">
+            <div class="text-box">
+                <h2>Who We Are</h2>
+                <p>We are a group of students currently enrolled in college, pursuing various degrees, and some of us are graduates. Our goal is to help students make informed decisions about their education and career.</p>
+            </div>
+            <div class="image-box">
+                <img src="{% static 'about-photo-1.jpg' %}" alt="Who We Are">
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row">
+            <div class="text-box">
+                <h2>Our Mission</h2>
+                <p>We aim to bridge the gap between students and educational opportunities by providing an AI-driven college recommendation system.</p>
+            </div>
+            <div class="image-box">
+                <img src="{% static 'about-photo-3.jpg' %}" alt="Our Mission">
+            </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="row">
+            <div class="text-box">
+                <h2>Features We Offer</h2>
+                <p>Our platform provides college recommendations, scholarship details, exam updates, and expert advice.</p>
+            </div>
+            <div class="image-box">
+                <img src="{% static 'about-photo-4.jpg' %}" alt="Features We Offer">
+            </div>
+        </div>
+
+        <!-- Row 5 -->
+        
+
+    </div>
+    
+</div>
+<footer>
+    
+    <!-- Moving Logos Section -->
+    
+    
+    <footer>
+        <!-- Footer Content -->
+        <div class="footer-content">
+            <h3>Contact Us</h3>
+            <p>Mobile: 9423984568</p>
+            <p>Email: <a href="mailto:collegematch34@gmail.com">collegematch34@gmail.com</a></p>
+        </div>
+    
+        <!-- Legal Links at the bottom -->
+        <div class="footer-links">
+            <a href="{% url 'privacy' %}">Privacy Policy</a>
+            <a href="{% url 'tc' %}">Terms & Conditions</a>
+            <a href="{% url 'dis' %}">Disclaimer</a>
+            <a href="{% url 'sitemap' %}">Sitemap</a>
+
+        </div>
+    </footer>
+    
+
+
+
+{% endblock content %}

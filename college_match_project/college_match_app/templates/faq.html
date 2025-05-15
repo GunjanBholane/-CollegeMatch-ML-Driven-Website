@@ -1,0 +1,111 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .faq-section {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        background: linear-gradient(to right, rgba(244, 106, 143, 0.277), rgba(0, 0, 0, 0.066));
+        color: white;
+        border-radius: 12px;
+    }
+
+    .faq-section h2 {
+        font-size: 2em;
+        color: black;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .faq {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e63973;
+        text-align: left;
+    }
+
+    .faq h3 {
+        color: #e63973;
+        cursor: pointer;
+        font-size: 1.3em;
+        margin: 0;
+    }
+
+    .faq p {
+        display: none;
+        color: black;
+        margin-top: 10px;
+        font-size: 1.2em;
+    }
+
+    .faq.active p {
+        display: block;
+    }
+
+    @media (max-width: 600px) {
+        .faq-section {
+            padding: 15px;
+        }
+
+        .faq h3 {
+            font-size: 1.1em;
+        }
+
+        .faq p {
+            font-size: 0.95em;
+        }
+    }
+    
+</style>
+
+  
+
+<div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+        <h3>1. How can I know if I'm eligible for a top college?</h3>
+        <p>Use our <strong><a href="{% url 'dream_college' %}">Dream College</a>
+        </strong> tool to check your eligibility based on your academic performance and preferences.</p>
+    </div>
+
+    <div class="faq">
+        <h3>2. What if I'm not eligible for my dream college?</h3>
+        <p>Visit our <strong><a href="{% url 'get_consultancy' %}">Get Consultancy</a></strong> page to receive expert advice and personalized guidance for alternative options.</p>
+    </div>
+
+    <div class="faq">
+        <h3>3. Where can I find the latest updates about exams and colleges?</h3>
+        <p>Check out the <strong><a href="{% url 'news' %}">News</a></strong> section for real-time updates, announcements, and alerts relevant to your journey.</p>
+    </div>
+
+    <div class="faq">
+        <h3>4. Are there any scholarships available for students like me?</h3>
+        <p>Yes! Visit the <strong><a href="{% url 'scholarships' %}">Scholarships</a></strong> section to explore opportunities based on your merit, background, or needs.</p>
+    </div>
+
+    <div class="faq">
+        <h3>5. Can I see the list of top-ranked colleges?</h3>
+        <p>Head to the <strong><a href="{% url 'top_colleges' %}">Top Colleges</a></strong> page to view detailed info on the best institutions by stream, location, and ranking.</p>
+    </div>
+
+    <div class="faq">
+        <h3>6. How do I give feedback or get more help?</h3>
+        <p>Go to the <strong><a href="{% url 'about_us' %}">About Us</a></strong> page where you’ll find useful links, contact details, and a way to share your thoughts.</p>
+    </div>
+    <div class="faq">
+        <h3>7. Is the service paid or free?</h3>
+        <p>Our website offers free consultancy services. However, some specialized consultancy options may be available for a fee, depending on the consultant's expertise and the services provided.</p>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll(".faq h3").forEach(item => {
+        item.addEventListener("click", () => {
+            item.parentElement.classList.toggle("active");
+        });
+    });
+</script>
+{% endblock %}

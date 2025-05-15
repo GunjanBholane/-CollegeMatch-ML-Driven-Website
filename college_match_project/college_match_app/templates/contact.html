@@ -1,0 +1,51 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: #f5f7fa;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 500px;
+}
+
+.contact-card h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.contact-card p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #34495e;
+}
+
+.contact-card a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+</style>
+<section class="contact-section">
+    <div class="contact-card">
+        <h3>Contact Us</h3>
+        <p><strong>Mobile:</strong> 888888888</p>
+        <p><strong>Email:</strong> <a href="mailto:collegematch34@gmail.com">collegematch34@gmail.com</a></p>
+    </div>
+</section>
+{% endblock %}

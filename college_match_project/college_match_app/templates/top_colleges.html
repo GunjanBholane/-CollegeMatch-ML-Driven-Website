@@ -1,0 +1,660 @@
+{% extends "index.html" %}
+{% load static %} 
+
+
+{% block content %}
+<style>
+.colleges-section {
+    width: 90%; /* Adjusted width */
+    max-width: 1200px; /* Slightly reduced max width */
+    margin: 50px auto;
+    text-align: center;
+}
+
+.college {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 30px; /* Adjusted padding */
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+    margin-bottom: 30px;
+    width: 100%; 
+}
+
+.image-box {
+    flex: 1.5; /* Increased flex ratio to make image bigger */
+    text-align: left;
+}
+
+.image-box img {
+    width: 400px; /* Increased image size */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.details-box {
+    flex: 1; /* Reduced text section width */
+    padding: 20px; /* Adjusted padding */
+    text-align: left;
+    font-size: large;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+th {
+    background-color: #ff4d94;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #ff4d94;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #e63973;
+}
+
+@media (max-width: 768px) {
+    .college {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .details-box {
+        text-align: center;
+    }
+
+    .image-box img {
+        width: 300px; /* Adjust image size for smaller screens */
+    }
+}
+
+
+</style>
+
+  
+
+<div class="colleges-section">
+    <h1>See Top Engineering Colleges in Maharashtra</h1>
+    
+    <!-- College 1 -->
+    <div class="college">
+        <div class="image-box">
+            <img src="{% static 'college-1.jpg' %}" alt="COEP College">
+        </div>
+        <div class="details-box">
+            <table>
+                <tr>
+                    <th>College Name</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>COEP</td>
+                    <td><a href="https://www.coeptech.ac.in/" target="_blank">Visit Website</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="college">
+        <div class="image-box">
+            <img src="{% static 'college 4.jpg' %}" alt="Walchand College of Engineering, Sangli">
+        </div>
+        <div class="details-box">
+            <table>
+                <tr>
+                    <th>College Name</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Walchand College</td>
+                    <td><a href="https://www.walchandsangli.ac.in/" target="_blank">Visit Website</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- College 1 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 5.jpg' %}" alt="Pune Institute of Computer Technology (PICT), Pune">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>(PICT), Pune</td>
+                <td><a href="https://www.pict.edu/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 2 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 6.jpg' %}" alt="Vishwakarma Institute of Technology (VIT), Pune">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>VIT, Pune</td>
+                <td><a href="https://www.vit.edu/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 7.jpg' %}" alt="MIT World Peace University (MIT WPU), Pune">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>MIT WPU, Pune</td>
+                <td><a href="https://mitwpu.edu.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 8.png' %}" alt="RCOEM, Nagpur">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>RCOEM, Nagpur</td>
+                <td><a href="https://www.rknec.edu/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Continue same pattern -->
+
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 3.jpg' %}" alt="Government College of Engineering, Amravati">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>GCOE, Amravati</td>
+                <td><a href="https://www.gcoea.ac.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 10.jpg' %}" alt="Government College of Engineering, Aurangabad">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>GCOE, Aurangabad</td>
+                <td><a href="https://geca.ac.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+    <!-- College 11 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 11.jpg' %}" alt="Fr. Conceicao Rodrigues College of Engineering, Mumbai (Fr. CRCE)">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Fr. CRCE, Mumbai</td>
+                <td><a href="https://frcrce.ac.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 12 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 12.png' %}" alt="Dwarkadas J. Sanghvi College of Engineering (DJSCOE), Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>DJSCOE, Mumbai</td>
+                <td><a href="https://www.djsce.ac.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 13 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 13.jpg' %}" alt="K. J. Somaiya College of Engineering, Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>KJSCE, Mumbai</td>
+                <td><a href="https://kjsce.somaiya.edu/en" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 14 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 14.jpg' %}" alt="Cummins College of Engineering for Women, Pune">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Cummins College, Pune</td>
+                <td><a href="https://cumminscollege.org/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 15 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 15.jpg' %}" alt="Army Institute of Technology (AIT), Pune">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>AIT, Pune</td>
+                <td><a href="https://www.aitpune.com/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 16 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 16.jpg' %}" alt="Bharati Vidyapeeth Deemed University College of Engineering, Pune">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>BVDU COE, Pune</td>
+                <td><a href="https://www.bvuniversity.edu.in/coepune/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 17 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 17.jpg' %}" alt="SIES Graduate School of Technology, Navi Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>SIES GST, Navi Mumbai</td>
+                <td><a href="https://siesgst.edu.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 18 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 18.jpg' %}" alt="Sinhgad College of Engineering, Pune">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>SCOE, Pune</td>
+                <td><a href="https://cms.sinhgad.edu/sinhgad_engineering_institutes/vadgaon_scoe/about.aspx" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 19 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 19.jpg' %}" alt="Rajiv Gandhi Institute of Technology (RGIT), Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>RGIT, Mumbai</td>
+                <td><a href="https://www.mctrgit.ac.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 20 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 20.jpg' %}" alt="Terna Engineering College, Navi Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Terna EC, Navi Mumbai</td>
+                <td><a href="https://ternaengg.ac.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 21 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 21.jpg' %}" alt="Thadomal Shahani Engineering College (TSEC), Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>TSEC, Mumbai</td>
+                <td><a href="https://tsec.edu/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 22 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 22.jpg' %}" alt="Yeshwantrao Chavan College of Engineering (YCCE), Nagpur">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>YCCE, Nagpur</td>
+                <td><a href="https://ycce.edu/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 23 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 23.jpg' %}" alt="MIT Academy of Engineering (MITAOE), Alandi, Pune">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>MITAOE, Alandi</td>
+                <td><a href="https://www.mitaoe.ac.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 24 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 24.jpg' %}" alt="MGM's College of Engineering and Technology, Navi Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>MGMCET, Navi Mumbai</td>
+                <td><a href="https://www.mgmmumbai.ac.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 25 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college  25.jpg' %}" alt="DY Patil College of Engineering, Pune">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>DY Patil COE, Pune</td>
+                <td><a href="https://www.dypcoeakurdi.ac.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 26 -->
+<!-- College 26 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 26.jpg' %}" alt="A.C. Patil College of Engineering, Navi Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>A.C. Patil College, Navi Mumbai</td>
+                <td><a href="https://www.acpce.org/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 27 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 29.jpg' %}" alt="Vidyalankar Institute of Technology (VIT), Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>VIT, Mumbai</td>
+                <td><a href="https://vit.edu.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 28 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 28.jpg' %}" alt="Lokmanya Tilak College of Engineering (LTCE), Navi Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>LTCE, Navi Mumbai</td>
+                <td><a href="https://ltce.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 29 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 27.jpg' %}" alt="Dr. D. Y. Patil Institute of Technology (DYPIET), Pimpri, Pune">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>DYPIET, Pune</td>
+                <td><a href="https://engg.dypvp.edu.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 30 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'college 30.jpg' %}" alt="Xavier Institute of Engineering (XIE), Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>XIE, Mumbai</td>
+                <td><a href="https://xaviers.edu/xie/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 1 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'c1.jpg' %}" alt="Veermata Jijabai Technological Institute (VJTI), Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>VJTI, Mumbai</td>
+                <td><a href="https://vjti.ac.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- College 2 -->
+<div class="college">
+    <div class="image-box">
+        <img src="{% static 'c2.jpg' %}" alt="Sardar Patel Institute of Technology (SPIT), Mumbai">
+    </div>
+    <div class="details-box">
+        <table>
+            <tr>
+                <th>College Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>SPIT, Mumbai</td>
+                <td><a href="https://www.spit.ac.in/" target="_blank">Visit Website</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+
+{% endblock content %}

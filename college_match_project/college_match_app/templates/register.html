@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block start %}
+<style>
+  .F {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff0f5;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.2);
+  }
+
+  .F h2 {
+    color: #e91e63;
+    font-weight: 700;
+  }
+
+  .form-group label {
+    font-weight: 600;
+    color: #333;
+  }
+
+  .form-control {
+    border: 1px solid #ffc0cb;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 105, 180, 0.25);
+    border-color: #ff69b4;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 5px;
+  }
+
+  .form-check-label {
+    color: #555;
+  }
+
+  .btn-primary {
+    background-color: #ff69b4;
+    border-color: #ff69b4;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .btn-primary:hover {
+    background-color: #e91e63;
+    border-color: #e91e63;
+  }
+
+  .alert-primary {
+    background-color: #ffe4ec;
+    color: #e91e63;
+    border-color: #f8bbd0;
+  }
+
+  h4 {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  h4 a {
+    color: #ff4081;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  h4 a:hover {
+    text-decoration: underline;
+  }
+  .form-group {
+  width: 100%;
+}
+
+.form-group label,
+.form-group input {
+  display: block;
+  width: 100%;
+}
+
+</style>
+
+<div class="container mt-5" style="max-width: 500px;">
+  <form class="F" method="POST">
+    {% csrf_token %}
+    <h2 class="mb-4">Register</h2>
+    <hr>
+    {% if messages %}
+      <div class="alert alert-primary" role="alert">
+        {% for message in messages %}
+          {{ message }}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="form-group mb-3">        
+      <label for="first_name">First Name</label>
+      <input type="text" id="first_name" name="first_name" class="form-control">
+    </div>
+
+    <div class="form-group mb-3">        
+      <label for="last_name">Last Name</label>
+      <input type="text" id="last_name" name="last_name" class="form-control">
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" name="username" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+      <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    
+    <div class="form-group mb-3">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+
+    <div>
+      <h4>already have account <a href="{% url 'login' %}">Login</a></h4>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

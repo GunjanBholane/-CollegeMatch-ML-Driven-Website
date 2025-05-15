@@ -1,0 +1,74 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .tc-container {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 30px;
+        background: linear-gradient(to right, rgba(244, 106, 143, 0.1), rgba(0, 0, 0, 0.03));
+        color: #333;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        font-family: 'Arial', sans-serif;
+    }
+
+    .tc-container h2 {
+        color: #e63973;
+        margin-bottom: 20px;
+    }
+
+    .tc-container h3 {
+        margin-top: 25px;
+        color: #e63973;
+    }
+
+    .tc-container p {
+        line-height: 1.7;
+        margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .tc-container {
+            padding: 20px;
+        }
+    }
+    .tc-container p,h3{
+       text-align:left;
+    }
+</style>
+
+<div class="tc-container">
+    <h2>Terms and Conditions</h2>
+
+    <p>Welcome to <strong>College Match</strong>. These Terms and Conditions govern your use of our platform, which provides services such as college prediction based on eligibility, consultancy referrals, scholarship listings, educational news updates, and more.</p>
+
+    <h3>1. Acceptance of Terms</h3>
+    <p>By accessing or using any part of our website, you agree to be bound by these terms. If you do not agree, you may not access the site or use any services.</p>
+
+    <h3>2. Use of Information</h3>
+    <p>All content on this site, including predictive results and resources, is for informational purposes only and should not be considered official admission advice. While we strive for accuracy, we do not guarantee outcomes based on the use of our tools.</p>
+
+    <h3>3. Eligibility Predictions</h3>
+    <p>Predictions are made using historical data and algorithms and may not reflect current admission trends or individual circumstances. You are advised to verify with official college sources before making decisions.</p>
+
+    <h3>4. Consultancy Referrals</h3>
+    <p>Our consultancy feature connects students with educational advisors. We are not responsible for the outcomes or advice provided by third-party consultants.</p>
+
+    <h3>5. Scholarships and News</h3>
+    <p>Scholarship listings and news articles are updated regularly, but we do not guarantee the availability, eligibility, or accuracy of third-party programs mentioned on our site.</p>
+
+    <h3>6. Intellectual Property</h3>
+    <p>All content, designs, and code on this website are the intellectual property of College Match and may not be reproduced or distributed without permission.</p>
+
+    <h3>7. Limitation of Liability</h3>
+    <p>We are not liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the services provided.</p>
+
+    <h3>8. Changes to Terms</h3>
+    <p>We reserve the right to update or modify these Terms and Conditions at any time. Continued use of the site after such changes constitutes your agreement to the updated terms.</p>
+
+    <h3>9. Contact</h3>
+    <p>If you have any questions about these Terms, please contact us through the About Us page or via email.</p>
+</div>
+{% endblock %}

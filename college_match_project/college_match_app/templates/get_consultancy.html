@@ -1,0 +1,217 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .consultancy-container {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .consultancy-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .consultancy-header h1 {
+        font-size: 36px;
+        color: #ff4d94;
+    }
+
+    .consultancy-header p {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .section-title {
+        font-size: 28px;
+        color: #333;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .consultancy-categories {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .category-card {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .category-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .category-card h3 {
+        font-size: 22px;
+        color: #ff4d94;
+        margin-top: 15px;
+    }
+
+    .category-card p {
+        font-size: 16px;
+        color: #666;
+        margin-top: 10px;
+    }
+
+    .cta-button {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .cta-button a {
+        background-color: #ff4d94;
+        color: white;
+        padding: 15px 30px;
+        font-size: 18px;
+        text-decoration: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-button a:hover {
+        background-color: #ff3385;
+    }
+
+    .testimonial-section {
+        background-color: #f1f1f1;
+        padding: 50px 0;
+        margin-top: 50px;
+    }
+
+    .testimonial-section h2 {
+        text-align: center;
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    .testimonial-card {
+        background-color: #fff;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .testimonial-card p {
+        font-size: 16px;
+        color: #555;
+        font-style: italic;
+    }
+
+    .testimonial-card h5 {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #ff4d94;
+    }
+
+    .contact-form {
+        margin-top: 40px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 15px;
+        background-color: #ff4d94;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .contact-form button:hover {
+        background-color: #ff3385;
+    }
+    .consultancy-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+</style>
+
+  
+
+<div class="consultancy-container">
+    <div class="consultancy-header">
+        <h1>Get Real-Time Consultancy for Career & Education</h1>
+        <p>Looking for guidance on career paths, Engineering courses, MSTC, or any educational questions? We are here to help you every step of the way!</p>
+    </div>
+
+    <div class="section-title">What We Offer</div>
+    <div class="consultancy-categories">
+        <div class="category-card">
+            <img src="{% static 'Career Consultancy.png' %}" alt="Career Consultancy">
+            <h3>Career Consultancy</h3>
+            <p>Get personalized career guidance based on your skills, interests, and market trends.</p>
+        </div>
+        <div class="category-card">
+            <img src="{% static 'Engineering Consultancy.png' %}" alt="Engineering Consultancy">
+            <h3>Engineering Consultancy</h3>
+            <p>Explore various Engineering fields and find the best path for your future.</p>
+        </div>
+        
+    </div>
+
+    <div class="cta-button">
+        <a href="{% url 'contact' %}">Contact us Now!</a>
+    </div>
+
+    <div class="testimonial-section">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-card">
+            <p>"The career advice I received helped me land my dream job! I now know the right steps to take and feel confident about my future."</p>
+            <h5>– Sarah K.</h5>
+        </div>
+        <div class="testimonial-card">
+            <p>"I was confused about which engineering branch to choose, but with the help of the consultancy, I made the right decision."</p>
+            <h5>– Rahul P.</h5>
+        </div>
+        <div class="testimonial-card">
+            <p>"The MSTC consultancy was incredibly helpful in explaining the different fields and career opportunities available in the market."</p>
+            <h5>– Priya S.</h5>
+        </div>
+    </div>
+
+<!--    <div id="contact-form" class="contact-form">-->
+<!--        <h3>Get In Touch With Us</h3>-->
+<!--        <form action="/submit-consultancy" method="POST">-->
+<!--            {% csrf_token %}-->
+<!--            <input type="text" name="name" placeholder="Your Name" required>-->
+<!--            <input type="email" name="email" placeholder="Your Email" required>-->
+<!--            <textarea name="message" placeholder="Describe your consultancy request..." required></textarea>-->
+<!--            <button type="submit">Submit Request</button>-->
+<!--        </form>-->
+<!--    </div>-->
+</div>
+
+{% endblock content %}

@@ -1,0 +1,182 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .college-section {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        padding: 60px 80px;
+        gap: 40px;
+        background: linear-gradient(to right, #f9f9f9, #f0f0f0);
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .college-image {
+        flex: 1; /* Changed to 1 for equal distribution */
+        display: flex;
+        align-items: center;
+    }
+
+    .college-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        min-height: 500px;
+        max-height: 700px;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .college-image img:hover {
+        transform: scale(1.02);
+    }
+
+    .college-info {
+        flex: 1; /* Changed to 1 for equal distribution */
+        background-color: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 500px;
+        max-height: 500px;
+        width: 700px;
+        overflow-y: auto;
+        text-align: left;
+    }
+
+    .college-info h2 {
+        color: #e63973;
+        margin-bottom: 20px;
+        font-size: 2.2em;
+    }
+
+    .college-info p {
+        font-size: 1.15em;
+        color: #333;
+        line-height: 1.7;
+        margin-bottom: 12px;
+    }
+    .logo-marquee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.logo-marquee-container {
+    display: flex;
+    animation: marquee 15s linear infinite;
+}
+
+.logo-marquee-container {
+    display: flex;
+    animation: marquee 15s linear infinite;
+    animation-play-state: running; /* Default */
+}
+
+/* Pause animation on hover */
+.logo-marquee-container:hover {
+    animation-play-state: paused;
+}
+
+/* Animation for moving logos */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.logo-marquee-container img {
+    margin: 0 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 95px; /* Adjust the size as needed */
+}
+/* Footer Styling */
+footer {
+    background-color: white; /* Dark gray background */
+    padding: 30px 0;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+/* Footer Legal Links Styling */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.footer-links a {
+    color: #b3b3b3; /* Light gray text */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #ff4d94; /* Pink on hover */
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
+  
+
+<div class="college-section">
+    <div class="college-image">
+        <img src="{% static 'home.jpg' %}" alt="College Campus">
+    </div>
+    <div class="college-info" style="max-height: 900px; max-width: 1000px;">
+        <h2>Welcome to College Match</h2>
+        <p>College Match is your intelligent companion for choosing the best-fit engineering colleges based on your marks, preferences, and career goals.</p>
+        <p>We offer advanced predictive tools, real-time updates, and curated resources to guide students toward the right academic path.</p>
+        <p>Our system analyzes data from top universities, entrance scores, and trends to help you make confident decisions about your future.</p>
+        <p>Get personalized college recommendations, access expert consultancy, discover scholarships, and track admission news – all in one place.</p>
+        <p>We empower students across India with transparent and AI-powered solutions for streamlined college planning and selection.</p>
+        <p>Explore, analyze, and match with your dream college today with College Match!</p>
+    </div>
+</div>
+<footer>
+    <h2>Useful Links 🔗</2>
+ 
+<div class="logo-marquee">
+    <div class="logo-marquee-container">
+        <img src="{% static '1_logo.png' %}" alt="Logo 1" onclick="window.open('https://www.shiksha.com/', '_blank')">
+        <img src="{% static '2_logo.jpg' %}" alt="Logo 2" onclick="window.open('https://cetcell.mahacet.org/', '_blank')">
+        <img src="{% static '3_logo.jpg' %}" alt="Logo 3" onclick="window.open('https://neet.nta.nic.in/', '_blank')">
+        <img src="{% static '4.jpg' %}" alt="Logo 4" onclick="window.open('https://jeemain.nta.nic.in/', '_blank')">
+        <img src="{% static '5.jpg' %}" alt="Logo 4" onclick="window.open('https://jeemain.nta.nic.in/', '_blank')">
+        <img src="{% static '6.jpg' %}" alt="Logo 4" onclick="window.open('https://dte.maharashtra.gov.in/', '_blank')">
+
+        <!-- Add more logos as needed -->
+    </div>
+</div>
+</footer>
+{% endblock %}

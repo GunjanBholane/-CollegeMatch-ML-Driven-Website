@@ -1,0 +1,118 @@
+{% extends "index.html" %}
+{% load static %} 
+
+{% block content %}
+<style>
+/* Scholarships Section */
+.scholarships-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Table Container */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+thead {
+    background: #f46a8f;
+    color: white;
+}
+
+thead th {
+    padding: 15px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #ffe4e1;
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+a {
+    color: #f46a8f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+</style>
+  
+
+<div class="scholarships-section">
+    <h1 style="font-size: 2rem; margin-bottom: 10px;">Scholarships</h1>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Scholarship Name</th>
+                    <th>Full Link</th>
+                    <th>Facility</th>
+                    <th>Benefits</th>
+                    <th>Eligibility</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Post-Matric Scholarship for SBC Students</td>
+                    <td><a href="https://mahadbt.maharashtra.gov.in/SchemeData/SchemeData?str=E9DDFA703C38E51AACF2205FD2FB060A" target="_blank">Link</a></td>
+                    <td>Tuition Fees, Examination Fees</td>
+                    <td>Financial assistance for SBC students</td>
+                    <td>Must belong to SBC category, permanent resident of Maharashtra, family income below INR 1,00,000 per annum</td>
+                </tr>
+                <tr>
+                    <td>Dr. Punjabrao Deshmukh Vasatigruh Nirvah Bhatta Yojna</td>
+                    <td><a href="https://mahadbt.maharashtra.gov.in/SchemeData/SchemeData?str=E9DDFA703C38E51A1DB822FC15D61FEA" target="_blank">Link</a></td>
+                    <td>Tuition Fees, Examination Fees</td>
+                    <td>Financial assistance for VJNT students</td>
+                    <td>Must belong to VJNT category, permanent resident of Maharashtra</td>
+                </tr>
+                <tr>
+                    <td>Education Concession to the Children of Ex-Servicemen</td>
+                    <td><a href="https://mahadbt.maharashtra.gov.in/SchemeData/SchemeData?str=E9DDFA703C38E51ADB0E651ACBFBD0AB" target="_blank">Link</a></td>
+                    <td>Tuition Fees, Examination Fees</td>
+                    <td>Financial assistance for children of ex-servicemen</td>
+                    <td>Must be a child of an ex-serviceman, permanent resident of Maharashtra</td>
+                </tr>
+                <tr>
+                    <td>Vocational Education Maintenance Allowance to ST Students</td>
+                    <td><a href="https://mahadbt.maharashtra.gov.in/SchemeData/SchemeData?str=E9DDFA703C38E51AADA109F73D48B5D5" target="_blank">Link</a></td>
+                    <td>Tuition Fees, Examination Fees</td>
+                    <td>Financial assistance for ST students</td>
+                    <td>Must belong to ST category, permanent resident of Maharashtra</td>
+                </tr>
+                <tr>
+                    <td>Government Vidyaniketan Scholarship</td>
+                    <td><a href="https://mahadbt.maharashtra.gov.in/SchemeData/SchemeData?str=E9DDFA703C38E51AEC62CC61F6C26609" target="_blank">Link</a></td>
+                    <td>Tuition Fees, Examination Fees</td>
+                    <td>Financial assistance for ST students</td>
+                    <td>Must belong to ST category, permanent resident of Maharashtra</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock content %}

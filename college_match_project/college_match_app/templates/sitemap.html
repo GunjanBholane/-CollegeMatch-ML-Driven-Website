@@ -1,0 +1,68 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .sitemap-container {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .sitemap-container h2 {
+        text-align: left;
+        color: #ff4d94;
+        margin-bottom: 20px;
+    }
+
+    .sitemap-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sitemap-list li {
+        margin: 10px 0;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .sitemap-list a {
+        color: #ff4d94;
+        text-decoration: none;
+    }
+
+    .sitemap-list a:hover {
+        text-decoration: underline;
+    }
+    .sitemap-container {
+    text-align:left;
+    }
+</style>
+
+<div class="sitemap-container">
+    <h2>Website Sitemap</h2>
+    <ul class="sitemap-list">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about_us' %}">About Us</a></li>
+        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+        <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+        <li><a href="{% url 'tc' %}">Terms & Conditions</a></li>
+        <li><a href="{% url 'dis' %}">Disclaimer</a></li>
+        <li><a href="{% url 'scholarships' %}">Scholarships</a></li>
+        <!-- <li><a href="{% url 'about_us' %}">College Match</a></li> -->
+        <li><a href="{% url 'faq' %}">FAQ</a></li>
+        <li><a href="{% url 'news' %}">News</a></li>
+        <li><a href="{% url 'dream_college' %}">College Predictor</a></li>
+        <li><a href="{% url 'get_consultancy' %}">Get Consultancy</a></li>
+        <li><a href="{% url 'top_colleges' %}">Top colleges</a></li>
+
+
+
+
+    </ul>
+</div>
+
+{% endblock content %}

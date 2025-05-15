@@ -1,0 +1,71 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .disclaimer-section {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 25px;
+        background: linear-gradient(to right, rgba(244, 106, 143, 0.69), rgba(0, 0, 0, 0.297));
+        color: white;
+        border-radius: 12px;
+        font-family: Arial, sans-serif;
+    }
+
+    .disclaimer-section h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #e63973;
+        text-align: left;
+    }
+
+    .disclaimer-section p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 600px) {
+        .disclaimer-section {
+            padding: 15px;
+        }
+
+        .disclaimer-section p {
+            font-size: 1em;
+        }
+    }
+    .disclaimer-section p{
+    text-align:left;
+    }
+</style>
+
+<div class="disclaimer-section">
+    <h2>Disclaimer</h2>
+
+    <p>
+        The information provided on <strong>College Match</strong> is for general educational and informational purposes only. 
+        Our tools — including Dream College prediction, consultancy suggestions, news updates, scholarship listings, and college rankings — are designed to assist students in making informed decisions, but they do not guarantee outcomes or admissions.
+    </p>
+
+    <p>
+        The <strong>Dream College</strong> feature offers predictions based on user inputs and publicly available data, but actual eligibility and admission depend on numerous external factors such as official cutoff scores, reservation policies, and institutional discretion.
+    </p>
+
+    <p>
+        The <strong>Consultancy</strong> services linked or recommended through this site are external resources. We do not directly endorse or guarantee the effectiveness or outcomes of these services.
+    </p>
+
+    <p>
+        While we strive to keep our <strong>News</strong> and <strong>Scholarship</strong> sections up to date, we cannot assure the accuracy or completeness of all posted information. Users are advised to verify important details from official sources before making decisions.
+    </p>
+
+    <p>
+        The <strong>Top Colleges</strong> list is curated based on available public rankings and user interest. College reputations and rankings may vary over time and by source.
+    </p>
+
+    <p>
+        By using this website, you acknowledge that you are solely responsible for any decisions made based on the information provided herein. <strong>College Match</strong> shall not be held liable for any direct or indirect losses or damages arising from the use of this platform.
+    </p>
+</div>
+{% endblock %}
